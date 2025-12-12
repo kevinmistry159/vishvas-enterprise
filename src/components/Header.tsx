@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import imglogo from "../photos/logo-removebg-preview.png";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -47,7 +48,7 @@ const Header = () => {
             {/* <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center "> */}
               {/* <span className="font-display text-2xl text-primary-foreground">V</span> */}
               <img
-                src="../../public/logo-removebg-preview.png"
+                src={imglogo}
                 alt="Vishvas Enterprise Logo"
                 className="w-14 h-14 object-contain"
               />

@@ -18,6 +18,7 @@ const PHONE_NUMBER = '+91 9824474301';
 const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProps) => {
   const { i18n, t } = useTranslation();
   if (!product) return null;
+  console.log("product image:", product.image);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

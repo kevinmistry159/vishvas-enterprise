@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { CreditCard, Clock, Truck } from "lucide-react";
+import img from "../photos/7brick.jpg"
 
 const ServicesSection = () => {
   const { t } = useTranslation();

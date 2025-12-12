@@ -2,17 +2,26 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import sizetap from "../photos/7sizetap.jpg";
+import owe from "../photos/owe.jpg";
+import stock from "../photos/stock.jpg";
+import size from "../photos/size.jpg"
+import dili from "../photos/dili.jpg";
+import lod from "../photos/lod.jpg";
+import home from "../photos/home.jpg";
+import pillar from "../photos/pillar.jpg";
+import poster from "../photos/poster.jpg";
 
 const galleryImages = [
-  "../public/7sizetap.jpg",
-  "../public/owe.jpg",
-  "../public/stock.jpg",
-  "../public/dili.jpg",
-  "../public/size.jpg",
-  "../public/lod.jpg",
-  "../public/home.jpg",
-  "../public/pillar.jpg",
-  "../public/poster.jpg",
+  sizetap,
+  owe,
+  stock,
+  size,
+  dili,
+  lod,
+  home,
+  pillar,
+  poster
 ];
 
 const GallerySection = () => {
