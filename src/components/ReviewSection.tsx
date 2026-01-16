@@ -34,7 +34,7 @@ const reviews: Review[] = [
     location_gu: 'વાવ-થરાદ(ભરડવા)',
     rating: 5,
     review: '“The quality of the products is excellent! Strong, durable, and perfectly sized. Our construction work became smoother and faster. Highly recommended.”',
-    review_gu: '"ઉત્પાદનોની ગુણવત્તા ઉત્તમ છે! મજબૂત, ટકાઉ અને સંપૂર્ણ કદની. અમારું બાંધકામ કાર્ય સરળ અને ઝડપી બન્યું. ખૂબ ભલામણ કરવામાં આવે છે."',
+    review_gu: 'ઉત્પાદનોની ગુણવત્તા ઉત્તમ છે! મજબૂત, ટકાઉ અને સંપૂર્ણ કદની. અમારું બાંધકામ કાર્ય સરળ અને ઝડપી બન્યું. ખૂબ ભલામણ કરવામાં આવે છે.',
     date: 'October 2025'
   },
   {
@@ -55,8 +55,8 @@ const reviews: Review[] = [
     location: 'tharad',
     location_gu: 'થરાદ',
     rating: 5,
-    review: '“Very high-quality poles at a reasonable price. We are fully satisfied with the strength.”',
-    review_gu: '"વાજબી કિંમતે ખૂબ જ ઉચ્ચ-ગુણવત્તાવાળા થાંભલા. અમે મજબૂતાઈથી સંપૂર્ણપણે સંતુષ્ટ છીએ."',
+    review: 'Very high-quality poles at a reasonable price. We are fully satisfied with the strength.',
+    review_gu: 'વાજબી કિંમતે ખૂબ જ ઉચ્ચ-ગુણવત્તાવાળા થાંભલા. અમે મજબૂતાઈથી સંપૂર્ણપણે સંતુષ્ટ છીએ.',
     date: 'August 2025'
   },
   {
@@ -72,13 +72,13 @@ const reviews: Review[] = [
   },
   {
     id: 6,
-    name: 'Rohit suthar',
-    name_gu: 'રોહિત સુથાર',
+    name: 'Rohit suthar(tetarava)',
+    name_gu: 'રોહિત સુથાર(તેતરવા)',
     location: 'bhabhar',
     location_gu: 'ભાભર',
     rating: 5,
-    review: '“Excellent management! From production to delivery, everything is handled with proper planning and responsibility.”',
-    review_gu: '"ઉત્તમ સંચાલન! ઉત્પાદનથી લઈને ડિલિવરી સુધી, બધું જ યોગ્ય આયોજન અને જવાબદારી સાથે સંભાળવામાં આવે છે."',
+    review: 'Excellent management! From production to delivery, everything is handled with proper planning and responsibility.',
+    review_gu: 'ઉત્તમ સંચાલન! ઉત્પાદનથી લઈને ડિલિવરી સુધી, બધું જ યોગ્ય આયોજન અને જવાબદારી સાથે સંભાળવામાં આવે છે.',
     date: 'June 2024'
   }
 ];

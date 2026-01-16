@@ -57,12 +57,12 @@ export const categories: Category[] = [
         products: [
           {
             id: "brick-7x14x4-ws-standard",
-            name: "Standard Fly Ash Brick 7×14×4 inch",
-            name_gu: "ફ્લાય એશ બ્લોક ( ખંડા ) 7×14×4 ઇંચ",
-            description: "The 7×14×4 Fly Ash Block is a strong, high-quality block with accurate dimensions and a smooth finish. Made using eco-friendly materials, it is ideal for partition walls, small structures, and fast construction work..",
-            description_gu: "7×14×4 ફ્લાય એશ બ્લોક(ખંડા) મજબૂત, ઉચ્ચ ગુણવત્તાવાળો બ્લોક છે જેમાં ચોક્કસ માપ અને સ્મૂથ ફિનિશ છે. ઇકો-ફ્રેન્ડલી સામગ્રીથી બનેલો, આ બ્લોક પાર્ટિશન વોલ, નાના માળખાં અને ઝડપી બાંધકામ માટે આદર્શ છે.",
+            name: "Standard Fly Ash Brick 14x4x7 inch",
+            name_gu: "ફ્લાય એશ બ્લોક ( ખંડા ) 14x4x7 ઇંચ",
+            description: "The 14x4x7 Fly Ash Block is a strong, high-quality block with accurate dimensions and a smooth finish. Made using eco-friendly materials, it is ideal for partition walls, small structures, and fast construction work..",
+            description_gu: "14x4x7 ફ્લાય એશ બ્લોક(ખંડા) મજબૂત, ઉચ્ચ ગુણવત્તાવાળો બ્લોક છે જેમાં ચોક્કસ માપ અને સ્મૂથ ફિનિશ છે. ઇકો-ફ્રેન્ડલી સામગ્રીથી બનેલો, આ બ્લોક પાર્ટિશન વોલ, નાના માળખાં અને ઝડપી બાંધકામ માટે આદર્શ છે.",
             image: img7brick,
-            mrp: "₹17-20",
+            mrp: "₹18",
             unit: "per piece",
             unit_gu: "પ્રતિ પીસ",
             specifications: {

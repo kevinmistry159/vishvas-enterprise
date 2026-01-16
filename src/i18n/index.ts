@@ -73,6 +73,7 @@ const resources = {
         price: "Price",
         updated: "Stock",
         note: "* Prices are subject to change based on market conditions. Contact us for accurate quotes.",
+        charge: "* factory price only;labor and edlivery charge extra.",
       },
       gallery: {
         title: "Gallery",

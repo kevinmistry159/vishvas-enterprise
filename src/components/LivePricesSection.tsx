@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { TrendingUp, Clock } from "lucide-react";
 
 const priceData = [
-  { product: "Fly Ash Brick [7x14x4 inch]", unit: "per 1", price: "₹16", updated: "Available" },
-  { product: "Fly Ash Brick [9x14x4 inch]", unit: "per 1", price: "₹18", updated: "Available" },
-  { product: "Altratech Cement (50kg)", unit: "per bag", price: "₹340", updated: "Available" },
+  { product: "Fly Ash Brick [7x14x4 inch]", unit: "per piece", price: "₹18", updated: "Available" },
+  { product: "Fly Ash Brick [9x14x4 inch]", unit: "per piece", price: "₹20", updated: "Available" },
+  { product: "Ultratech Cement (50kg)", unit: "per bag", price: "₹340", updated: "Available" },
   // { product: "Altratech Whetdher Cement", unit: "per bag", price: "₹400", updated: "3 hrs ago" },
  /* { product: "Sand", unit: "per trolly 21 inch", price: "₹2100", updated: "1 hr ago" },
   { product: "Stone (20mm)", unit: "per trolly", price: "₹5500", updated: "2 hrs ago" },

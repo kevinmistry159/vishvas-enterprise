@@ -284,13 +284,14 @@ function MaterialCalculatorSectionUI() {
     wallLength: '',
     wallHeight: '',
     wallThickness: '',
-    brickPreset: '15x5x7',
+    brickPreset: '14x4',
     customBrickLength: '',
     customBrickHeight: '',
     customBrickWidth: '',
     wastage: '0'
   });
   const [brickResult, setBrickResult] = useState(null);
+  const [price, setPrice] = useState<string>("");
 
   // Pole Calculator State
   const [poleForm, setPoleForm] = useState({
@@ -312,13 +313,14 @@ function MaterialCalculatorSectionUI() {
   // Brick Calculator Functions
   const handleBrickPresetChange = (preset) => {
     setBrickForm({ ...brickForm, brickPreset: preset });
+    setBrickResult(null); // Clear previous result when preset changes
   };
 
   const calculateBricks = (e) => {
     e.preventDefault();
     const wallLength = parseFloat(brickForm.wallLength) * 12;
     const wallHeight = parseFloat(brickForm.wallHeight) * 12;
-    const wallThickness = parseFloat(brickForm.wallThickness);
+    // const wallThickness = parseFloat(brickForm.wallThickness);
     const wastagePercent = parseFloat(brickForm.wastage);
     let brickLength, brickHeight, brickWidth;
     if (brickForm.brickPreset === 'custom') {
@@ -458,7 +460,7 @@ function MaterialCalculatorSectionUI() {
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <label className="block text-muted-foreground mb-2">{t('calculator.wallThickness')}</label>
                   <input
                     type="number"
@@ -468,7 +470,7 @@ function MaterialCalculatorSectionUI() {
                     required
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
-                </div>
+                </div> */}
               </div>
 
               <div>
@@ -478,10 +480,21 @@ function MaterialCalculatorSectionUI() {
                   onChange={(e) => handleBrickPresetChange(e.target.value)}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  <option value="14x4x7">{t('calculator.defaultBrick')}</option>
-                  <option value="14x4x9">{t('calculator.brick9')}</option>
+                  <option value="14x4x9">{t('calculator.defaultBrick')}</option>
+                  <option value="14x4x7">{t('calculator.brick9')}</option>
                   <option value="custom">{t('calculator.custom')}</option>
                 </select>
+              </div>
+
+              <div className="mt-4">
+                <label className="block text-muted-foreground mb-2">{t('Price(ભાવ)') || 'Price (per unit)'}</label>
+                <input
+                  type="number"
+                  step="0.01"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
               </div>
 
               {brickForm.brickPreset === 'custom' && (
@@ -548,16 +561,19 @@ function MaterialCalculatorSectionUI() {
                   <p className="text-3xl text-green-600">
                     {brickResult.toLocaleString()} {t('calculator.bricks')}
                   </p>
-                  <p className="text-lg text-primary mt-2 font-semibold">
-                    {t('calculator.estimatedPrice')} {(() => {
-                      const prod = brickProducts.find(p => p.id === selectedBrickProductId);
-                      if (!prod) return "-";
-                      const [min, max] = prod.mrp.replace(/[^\d\-]/g, "").split("-");
-                      if (!min || !max) return prod.mrp;
-                      return `₹${Math.ceil(Number(min) * brickResult)} - ₹${Math.ceil(Number(max) * brickResult)} ${prod.unit}`;
-                    })()}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">{t('calculator.note')}</p>
+                  {/* Show calculated total price if user entered price(s) */}
+                  {(() => {
+                    const qty = Number(brickResult);
+                    const p = price ? Number(price) : NaN;
+                    if (!isNaN(p)) {
+                      return (
+                        <p className="text-lg text-primary mt-2 font-semibold">
+                          {t('calculator.estimatedPrice') || 'Estimated Price'}: {`₹${Math.ceil(p * qty)}`}
+                        </p>
+                      );
+                    }
+                    return <p className="text-xs text-muted-foreground mt-2">{t('calculator.note')}</p>;
+                  })()}
                 </div>
               )}
             </form>

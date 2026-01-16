@@ -26,7 +26,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
-                <span className="font-display text-2xl text-primary-foreground">V</span>
+                <span className="font-display text-2xl text-primary-foreground">VE</span>
               </div>
               <div>
                 <h3 className="font-display text-xl">VISHVAS</h3>

@@ -17,7 +17,7 @@ const ContactSection = () => {
           className="text-center mb-12"
         >
           <h2 className="section-heading text-foreground mb-2">
-            {i18n.language === 'gu' ? "કોઈપણ પ્રશ્ન માટે કૉલ અથવા વૉટ્સએપ કરો" : "Call or WhatsApp for any query"}
+            {i18n.language === 'gu' ? "કોઈપણ પ્રશ્ન માટે કોલ અથવા વોટ્સએપ કરો" : "Call or WhatsApp for any query"}
             
           </h2>
           <p className="text-muted-foreground">
